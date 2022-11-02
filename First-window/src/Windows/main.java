@@ -7,8 +7,6 @@ public class main {
         Window Ventana = new Window(); //Instanciamos el objeto ventana.
 
         Ventana.setVisible(true); //Hacemos uso del metodo setVisible para hacer visible nuestro objeto ventana.
-        Ventana.setDefaultCloseOperation(2); //Le damos la funcionalidad a los botones de la ventana
-        Ventana.setTitle("Mi primera ventana");
-        
+
     }
 }
