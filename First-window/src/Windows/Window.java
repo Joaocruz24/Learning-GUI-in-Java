@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Window extends JFrame {
     public Window() {
@@ -12,8 +13,14 @@ public class Window extends JFrame {
         this.setLocationRelativeTo(rootPane); //Coloca nuestra ventana en el centro de nuestra pantalla (null/rootPane).
         // this.setResizable(false); //Bloqueamos la redimension de nuestra ventana.
         this.setMinimumSize(new Dimension(150, 150)); //Establece una dimension minima de nuestra ventana.
-        this.getContentPane().setBackground(Color.DARK_GRAY); //Establece el color de fondo de nuestra ventana.
+        // this.getContentPane().setBackground(Color.DARK_GRAY); //Establece el color de fondo de nuestra ventana.
+        initComponent();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE); //Le damos la funcionalidad al boton X de la ventana.
+    }
 
+    private void initComponent(){
+        JPanel panel = new JPanel();
+        panel.setBackground(Color.DARK_GRAY);
+        this.getContentPane().add(panel);
     }
 }
